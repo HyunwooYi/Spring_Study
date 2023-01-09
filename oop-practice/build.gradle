@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.passay:passay:1.6.1' //테스트 하기 쉬운 코드를 작성하다 보면 더 낮은 결합도를 가진 설계를 얻을 수 있음
+    //을 보여주기위해 필요한 의존성 추가  ((패스워드를 생성해주는 자바 라이브러리 의존성 추가))
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'  // @ParameterizedTest 사용하기 위한 의존성 추가
+
+    testImplementation 'org.assertj:assertj-core:3.23.1'  // assertj 의존성 추가
+}
+
+test {
+    useJUnitPlatform()
+}
