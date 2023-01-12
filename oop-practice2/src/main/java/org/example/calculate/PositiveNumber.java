@@ -1,4 +1,4 @@
-package org.example.calculate;
+package calculate;
 
 public class PositiveNumber {   //매 클래스의 opernad를 다 양수 판별을 위해 if문을 쓰는것은 비효율적이므로 클래스를 따로 만들었다.
 
