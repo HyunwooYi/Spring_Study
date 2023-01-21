@@ -16,7 +16,7 @@ public class UserDaoTest {
     void setUp() {
         ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
         populator.addScript(new ClassPathResource("db_schema.sql"));    //db_schema.sql 이라는 파일을 path에서 읽어와서 스크립트에 추가
-        DatabasePopulatorUtils.execute(populator, ConncectionManager.getDataSource());
+        DatabasePopulatorUtils.execute(populator, ConnectionManager.getDataSource());
     }
 
     @Test

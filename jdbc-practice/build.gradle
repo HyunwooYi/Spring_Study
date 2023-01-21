@@ -18,9 +18,12 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
-    testImplementation 'org.assertj:assertj-core:3.22.0'  // assertj 의존성 추가
+    testImplementation ('org.assertj:assertj-core:3.22.0')  // assertj 의존성 추가
 
-    testImplementation('com.h2database:h2:2.1.214') //데이터 베이스로 h2database
+    implementation 'com.h2database:h2:1.4.200'
+//    testImplementation('com.h2database:h2:2.1.214') //데이터 베이스로 h2database
+    implementation("com.h2database:h2:2.1.212")
+    implementation 'com.h2database:h2'
 }
 
 test {
